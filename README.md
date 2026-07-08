@@ -1,35 +1,20 @@
 # Ozarks Handyman
 
-Static local SEO website for `ozarkshandyman.com`, targeting Springfield, Missouri and nearby Ozarks communities.
+Premium local SEO website for `ozarkshandyman.com`, targeting Springfield, Missouri and the Ozarks.
 
-## Pages
+## Scale
 
-- `/` homepage
-- `/services/` plus seven service pages
-- `/areas/` plus Springfield, Nixa, Ozark, Republic and Battlefield pages
-- `/about/`, `/reviews/`, `/our-work/`, `/faq/`, `/contact/`, `/privacy/`
+- 18 service pages, each with 20+ FAQs and project examples
+- 10 city area pages
+- 14 Springfield neighborhood pages
+- 17 project examples on `/our-work/`
 
-## Before Publishing
+## Regenerate
 
-- Confirm the public contact email. The generated site currently uses `contact@ozarkshandyman.com`.
-- Add real reviews only after customers provide permission.
-- Replace project placeholders on `/our-work/` with real before-and-after work examples.
+```bash
+python generate_site.py
+```
 
-## GoDaddy DNS for Vercel
+## Contact
 
-After deploying this folder to Vercel and adding `ozarkshandyman.com` plus `www.ozarkshandyman.com` as domains:
-
-- Change the `A` record for `@` from `Parked` to `76.76.21.21`.
-- Change the `CNAME` record for `www` to `cname.vercel-dns.com`.
-- Keep GoDaddy nameservers unless you intentionally move DNS elsewhere.
-- Remove conflicting parked/forwarding records if Vercel reports a conflict.
-
-DNS can take a few minutes to 48 hours, but Vercel usually verifies quickly once the records are correct.
-
-## Domain Email
-
-The site uses `contact@ozarkshandyman.com`. Create that mailbox or forward in GoDaddy before launch:
-
-- GoDaddy > Domain > Email or Forwarding
-- Create `contact@ozarkshandyman.com` or forward it to your working inbox
-- Keep the existing `email` CNAME to Mailgun only if you still use Mailgun for outbound email
+Public email: `contact@ozarkshandyman.com`
