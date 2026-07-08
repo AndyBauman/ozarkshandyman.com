@@ -897,6 +897,14 @@ After deploying this folder to Vercel and adding `ozarkshandyman.com` plus `www.
 - Remove conflicting parked/forwarding records if Vercel reports a conflict.
 
 DNS can take a few minutes to 48 hours, but Vercel usually verifies quickly once the records are correct.
+
+## Domain Email
+
+The site uses `{EMAIL}`. Create that mailbox or forward in GoDaddy before launch:
+
+- GoDaddy > Domain > Email or Forwarding
+- Create `contact@ozarkshandyman.com` or forward it to your working inbox
+- Keep the existing `email` CNAME to Mailgun only if you still use Mailgun for outbound email
 """,
         encoding="utf-8",
     )
