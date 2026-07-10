@@ -35,7 +35,7 @@ AREAS: tuple[Area, ...] = (
         "a mix of historic bungalows, established family homes and newer upscale subdivisions",
         ("Whole-house punch lists before listing", "Historic-home door and trim adjustments", "Drywall and texture repair in finished living areas", "Deck and fence presentation repairs", "Rental turnover maintenance", "Cabinet hardware and hinge tuning", "Bath and kitchen caulk refresh", "TV mounting and shelving installs", "Inspection response repairs", "Seasonal exterior maintenance", "Move-in detail work for buyers", "Estate maintenance visits"),
         ("nixa", "ozark", "republic", "battlefield", "rountree", "phelps-grove"),
-        "ozarks_hills",
+        "craftsman_bungalow",
     ),
     Area(
         "nixa", "Nixa", "city",
@@ -46,7 +46,7 @@ AREAS: tuple[Area, ...] = (
         "newer suburban homes, family neighborhoods and larger lots with outdoor living spaces",
         ("Move-in punch lists", "Builder-grade hardware upgrades", "Deck and fence tune-ups", "Drywall anchor-hole repair", "Pantry and closet shelving", "Exterior caulk maintenance", "Pre-sale cosmetic repairs", "Garage storage installs", "Rental turnover items", "Storm-season exterior fixes", "Bath recaulking and fixture installs", "Interior door humidity adjustments"),
         ("springfield", "ozark", "republic", "battlefield"),
-        "estate_home",
+        "suburban_home",
     ),
     Area(
         "ozark", "Ozark", "city",
@@ -68,7 +68,7 @@ AREAS: tuple[Area, ...] = (
         "newer subdivisions, commuter-family homes and growing rental stock",
         ("Move-in hardware and door adjustments", "Drywall repair after settling", "Pre-sale photo-ready repairs", "Rental turnover bundles", "Closet and pantry shelving", "Fence gate repairs", "Cabinet hinge tuning", "Bath caulk and fixture installs", "Deck safety fixes", "Garage organization projects", "Inspection response items", "Seasonal maintenance visits"),
         ("springfield", "battlefield", "willard", "nixa"),
-        "springfield_home",
+        "suburban_home",
     ),
     Area(
         "battlefield", "Battlefield", "city",
@@ -79,7 +79,7 @@ AREAS: tuple[Area, ...] = (
         "suburban family homes and well-kept residential neighborhoods",
         ("Mixed interior-exterior punch lists", "Door and trim adjustments", "Deck and fence repairs", "Drywall touch-ups", "Shelving and fixture installs", "Rental maintenance", "Pre-sale cosmetic fixes", "Kitchen and bath detail work", "Garage storage upgrades", "Seasonal caulk refresh", "Inspection repairs", "Move-in buyer lists"),
         ("springfield", "republic", "ozark", "willard"),
-        "springfield_home",
+        "suburban_home",
     ),
     Area(
         "willard", "Willard", "city",
@@ -112,7 +112,7 @@ AREAS: tuple[Area, ...] = (
         "commuter homes, family residences and growing suburban pockets",
         ("Move-in and punch-list repairs", "Drywall and trim fixes", "Door and hardware adjustments", "Deck and fence touch-ups", "Shelving installs", "Rental turnovers", "Pre-sale prep", "Fixture upgrades", "Exterior caulk", "Inspection repairs", "Garage storage", "Seasonal maintenance"),
         ("springfield", "strafford", "nixa", "ozark"),
-        "estate_home",
+        "suburban_home",
     ),
     Area(
         "rountree", "Rountree", "neighborhood",
@@ -123,7 +123,7 @@ AREAS: tuple[Area, ...] = (
         "historic bungalows, early 20th-century homes and walkable neighborhood properties",
         ("Older-home door alignment", "Trim and casing repair", "Drywall patches in finished rooms", "Pre-sale cosmetic fixes", "Hardware upgrades", "Deck and porch touch-ups", "Fence gate repairs", "Bath and kitchen caulk", "Shelving and storage", "Inspection response items", "Rental maintenance", "Interior punch lists"),
         ("springfield", "phelps-grove", "brentwood", "walnut-street"),
-        "springfield_home",
+        "craftsman_bungalow",
     ),
     Area(
         "phelps-grove", "Phelps Grove", "neighborhood",
@@ -134,7 +134,7 @@ AREAS: tuple[Area, ...] = (
         "bungalows, duplexes, rentals and updated owner-occupied homes",
         ("Rental turnover repairs", "Drywall and trim touch-ups", "Door and hardware fixes", "Fixture and shelving installs", "Pre-leasing cosmetic repairs", "Kitchen and bath refresh items", "Deck and porch maintenance", "Fence repairs", "Move-in lists", "Inspection repairs", "Cabinet hinge tuning", "Seasonal maintenance"),
         ("springfield", "rountree", "southern-hills", "walnut-street"),
-        "luxury_interior",
+        "craftsman_bungalow",
     ),
     Area(
         "fremont-hills", "Fremont Hills", "neighborhood",
@@ -145,7 +145,7 @@ AREAS: tuple[Area, ...] = (
         "upscale single-family homes and well-maintained suburban estates",
         ("Pre-sale punch lists", "Trim and drywall finish repairs", "Cabinet hardware upgrades", "Deck and exterior presentation", "Custom shelving and storage", "TV and fixture installation", "Door and hardware tuning", "Bath and kitchen caulk refresh", "Fence gate repairs", "Inspection response items", "Estate maintenance visits", "Move-in detail upgrades"),
         ("springfield", "southern-hills", "ozark", "nixa"),
-        "estate_home",
+        "executive_home",
     ),
     Area(
         "southern-hills", "Southern Hills", "neighborhood",
@@ -156,7 +156,7 @@ AREAS: tuple[Area, ...] = (
         "established family homes with decks, fences and finished interiors",
         ("Deck and fence maintenance", "Door humidity adjustments", "Drywall and trim repairs", "Garage and storage upgrades", "Fixture and shelving installs", "Pre-sale cosmetic repairs", "Rental maintenance", "Kitchen and bath caulk", "Storm-season touch-ups", "Inspection repairs", "Move-in lists", "Seasonal maintenance bundles"),
         ("springfield", "phelps-grove", "fremont-hills", "brentwood"),
-        "deck_outdoor",
+        "traditional_estate",
     ),
     Area(
         "brentwood", "Brentwood", "neighborhood",
@@ -167,7 +167,7 @@ AREAS: tuple[Area, ...] = (
         "mid-century and updated family homes in established neighborhoods",
         ("Interior punch lists", "Drywall and trim repair", "Door and hardware fixes", "Fence gate repairs", "Deck maintenance", "Fixture installs", "Rental turnovers", "Pre-sale prep", "Kitchen and bath caulk", "Shelving upgrades", "Inspection items", "Move-in repairs"),
         ("springfield", "rountree", "roberson", "phelps-grove"),
-        "springfield_home",
+        "suburban_home",
     ),
     Area(
         "roberson", "Robberson", "neighborhood",
@@ -178,7 +178,7 @@ AREAS: tuple[Area, ...] = (
         "owner-occupied homes, rentals and mixed residential stock",
         ("Rental turnover repairs", "Drywall patching", "Door and hardware fixes", "Trim and caulk touch-ups", "Fixture installs", "Fence and porch repairs", "Pre-leasing cosmetic work", "Move-in lists", "Inspection repairs", "Cabinet hinge tuning", "Shelving installs", "Seasonal maintenance"),
         ("springfield", "brentwood", "grant-beach", "doling-park"),
-        "springfield_home",
+        "suburban_home",
     ),
     Area(
         "doling-park", "Doling Park", "neighborhood",
@@ -189,7 +189,7 @@ AREAS: tuple[Area, ...] = (
         "family homes and older residential properties",
         ("Drywall and trim repairs", "Door and hardware fixes", "Deck and fence maintenance", "Fixture and shelving installs", "Rental repairs", "Pre-sale cosmetic fixes", "Kitchen and bath caulk", "Garage storage", "Inspection items", "Move-in lists", "Storm-season touch-ups", "Seasonal maintenance"),
         ("springfield", "grant-beach", "roberson", "willard"),
-        "ozarks_hills",
+        "suburban_home",
     ),
     Area(
         "grant-beach", "Grant Beach", "neighborhood",
@@ -200,7 +200,7 @@ AREAS: tuple[Area, ...] = (
         "owner-occupied homes, rentals and established neighborhood housing",
         ("Rental turnover repairs", "Drywall patching", "Door and hardware fixes", "Fence and gate repairs", "Fixture installs", "Trim and caulk touch-ups", "Deck maintenance", "Pre-sale cosmetic repairs", "Shelving upgrades", "Inspection items", "Move-in lists", "Seasonal maintenance"),
         ("springfield", "doling-park", "roberson", "willard"),
-        "springfield_home",
+        "suburban_home",
     ),
     Area(
         "walnut-street", "Walnut Street District", "neighborhood",
@@ -211,7 +211,7 @@ AREAS: tuple[Area, ...] = (
         "condos, townhomes, rentals and renovated urban-adjacent residences",
         ("Condo and townhome punch lists", "Drywall and trim touch-ups", "Fixture and TV mounting", "Door and hardware repairs", "Rental turnover items", "Kitchen and bath caulk", "Shelving and storage", "Pre-sale cosmetic fixes", "Cabinet hinge tuning", "Inspection repairs", "Move-in lists", "Interior detail maintenance"),
         ("springfield", "phelps-grove", "rountree", "brentwood"),
-        "luxury_interior",
+        "refined_interior",
     ),
     Area(
         "woodhurst", "Woodhurst", "neighborhood",
@@ -255,7 +255,7 @@ AREAS: tuple[Area, ...] = (
         "executive subdivision homes with higher finish standards and larger maintenance lists",
         ("Estate maintenance visits", "Fixture and hardware upgrades", "Deck and fence care", "Interior paint touch-ups", "Cabinet tuning", "Custom shelving", "Pre-sale polish", "Storm repairs", "Screen and caulk refresh", "Whole-home tune-ups", "Guest house punch lists", "Seasonal exterior detail"),
         ("springfield", "fremont-hills", "southern-hills", "woodhurst"),
-        "estate_exterior",
+        "traditional_estate",
     ),
     Area(
         "highland-springs", "Highland Springs", "neighborhood",
@@ -266,7 +266,7 @@ AREAS: tuple[Area, ...] = (
         "family suburban housing with routine maintenance and move-in repair needs",
         ("Move-in repairs", "Door adjustments", "Drywall patches", "Fence gate fixes", "Deck maintenance", "Fixture installs", "Rental touch-ups", "Shelving upgrades", "Caulk refresh", "Punch lists", "Pre-sale cosmetic fixes", "Seasonal maintenance"),
         ("springfield", "republic", "nixa", "battlefield"),
-        "springfield_home",
+        "suburban_home",
     ),
     Area(
         "spring-creek", "Spring Creek", "neighborhood",
@@ -277,7 +277,7 @@ AREAS: tuple[Area, ...] = (
         "newer subdivisions and family homes with punch-list and move-in repair needs",
         ("Move-in punch lists", "Hardware installs", "Drywall touch-ups", "Cabinet adjustments", "Caulk and trim work", "Shelving installs", "Fence and deck touch-ups", "Fixture installs", "Pre-sale polish", "Inspection items", "Garage storage", "Seasonal maintenance"),
         ("springfield", "republic", "highland-springs", "battlefield"),
-        "luxury_home",
+        "suburban_home",
     ),
     Area(
         "wilson-creek", "Wilson's Creek", "neighborhood",

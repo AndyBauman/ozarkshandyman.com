@@ -154,6 +154,15 @@ def layout(
     </div>
   </footer>
   <script src="/assets/site.js" defer></script>
+  <!-- Default Statcounter code for OzarksHandyman.com/ -->
+  <script type="text/javascript">
+  var sc_project=13335412;
+  var sc_invisible=1;
+  var sc_security="9c65a881";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank" rel="noopener noreferrer"><img class="statcounter" src="https://c.statcounter.com/13335412/0/9c65a881/1/" alt="website statistics" referrerpolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->
 </body>
 </html>
 """
@@ -252,7 +261,7 @@ def home() -> None:
           <p>{BUSINESS_NAME} serves Springfield, Missouri and surrounding Ozarks communities with handyman care tailored to executive homes, pre-sale preparation, estate maintenance, and refined interior and exterior repairs.</p>
           <p>From Rountree character homes to Fremont Hills estates and growing suburbs in Nixa, Ozark, and Republic, we handle the repair list with calm precision—not contractor chaos.</p>
         </div>
-        {img_block("luxury_home", "Executive homes across the Ozarks deserve careful repair work.")}
+        {img_block("executive_home", "Traditional executive homes across the Ozarks deserve careful repair work.")}
       </div>
     </section>
 
@@ -311,9 +320,22 @@ def services_hub() -> None:
       </div>
       <div class="container card-grid">{service_cards()}</div>
     </section>
-    <section class="section accent media-section"><div class="container">{img_block("craftsmanship", "Precision matters in refined Ozarks homes.")}</div></section>
+    <section class="section accent media-section"><div class="container">{img_block("handyman_detail", "Precision matters in refined Ozarks homes.")}</div></section>
     """
-    write("/services/", layout(title=f"Handyman Services Springfield MO | {BUSINESS_NAME}", description="Explore premium handyman services in Springfield MO including estate maintenance, pre-sale prep, drywall, trim, decks, fences, fixtures, and more.", path="/services/", h1="Handyman Services in Springfield, Missouri", body=body, hero_image_key="craftsmanship", schema=[local_business_schema(), breadcrumb_schema([("Home", "/"), ("Services", "/services/")])]))
+    write("/services/", layout(title=f"Handyman Services Springfield MO | {BUSINESS_NAME}", description="Explore premium handyman services in Springfield MO including estate maintenance, pre-sale prep, drywall, trim, decks, fences, fixtures, and more.", path="/services/", h1="Handyman Services in Springfield, Missouri", body=body, hero_image_key="trim_carpentry", schema=[local_business_schema(), breadcrumb_schema([("Home", "/"), ("Services", "/services/")])]))
+
+
+EXTERIOR_SERVICE_KEYS = frozenset({
+    "fence_repair", "deck_outdoor", "gutter_exterior", "screen_porch",
+})
+
+
+def local_context_image_key(service_image_key: str) -> str:
+    if service_image_key in EXTERIOR_SERVICE_KEYS:
+        return "suburban_home"
+    if service_image_key in {"traditional_estate", "pre_sale_staging"}:
+        return "executive_home"
+    return "craftsman_bungalow"
 
 
 def service_page(service) -> None:
@@ -359,7 +381,7 @@ def service_page(service) -> None:
 
     <section class="section media-section">
       <div class="container two-col">
-        {img_block("ozarks_forest", "Local climate and housing character inform every repair decision.")}
+        {img_block(local_context_image_key(service.image_key), "Local housing character informs every repair decision.")}
         <div>
           <p class="eyebrow">Local Context</p>
           <h2>{service.name} across Springfield, Nixa, Ozark, and nearby communities.</h2>
@@ -503,19 +525,19 @@ def supporting_pages() -> None:
     extra = area_faqs("springfield", "Springfield", "city", AREAS[0].neighborhoods, AREAS[0].housing)[:18]
     all_faqs = global_faqs + extra
 
-    write("/about/", layout(title=f"About {BUSINESS_NAME} | Springfield MO Handyman", description="About Ozarks Handyman — refined handyman services for Springfield Missouri executive homes, estates, and discerning homeowners.", path="/about/", h1=f"About {BUSINESS_NAME}", hero_image_key="luxury_home", body=f"""
-    <section class="section split"><div class="container two-col"><div><p class="eyebrow">Our Approach</p><h2>Calm, capable, and respectful of your home.</h2><p>Ozarks Handyman exists for homeowners who expect more than a rushed repair. We serve Springfield and the surrounding Ozarks with practical craftsmanship, written scope, and tidy job sites.</p><p>From Fremont Hills estates to Rountree bungalows and growing suburbs in Nixa and Ozark, our work is built around finish quality and clear communication.</p></div>{img_block("luxury_interior", "Details matter in executive homes.")}</div></section>
-    <section class="section accent media-section"><div class="container two-col">{img_block("estate_exterior", "Ozarks estate properties deserve ongoing maintenance.")}<div><p class="eyebrow">The Ozarks</p><h2>Local homes. Local weather. Local judgment.</h2><p>Humidity, storms, seasonal temperature swings and varied housing stock across Springfield and nearby communities all influence the right repair approach.</p></div></div></section>
+    write("/about/", layout(title=f"About {BUSINESS_NAME} | Springfield MO Handyman", description="About Ozarks Handyman — refined handyman services for Springfield Missouri executive homes, estates, and discerning homeowners.", path="/about/", h1=f"About {BUSINESS_NAME}", hero_image_key="executive_home", body=f"""
+    <section class="section split"><div class="container two-col"><div><p class="eyebrow">Our Approach</p><h2>Calm, capable, and respectful of your home.</h2><p>Ozarks Handyman exists for homeowners who expect more than a rushed repair. We serve Springfield and the surrounding Ozarks with practical craftsmanship, written scope, and tidy job sites.</p><p>From Fremont Hills estates to Rountree bungalows and growing suburbs in Nixa and Ozark, our work is built around finish quality and clear communication.</p></div>{img_block("craftsman_bungalow", "Craftsman and traditional Ozarks homes need careful repair judgment.")}</div></section>
+    <section class="section accent media-section"><div class="container two-col">{img_block("traditional_estate", "Classic estate properties across southwest Missouri.")}<div><p class="eyebrow">The Ozarks</p><h2>Local homes. Local weather. Local judgment.</h2><p>Humidity, storms, seasonal temperature swings and varied housing stock across Springfield and nearby communities all influence the right repair approach.</p></div></div></section>
     """, schema=[local_business_schema(), breadcrumb_schema([("Home", "/"), ("About", "/about/")])]))
 
-    write("/our-work/", layout(title=f"Projects | {BUSINESS_NAME}", description="Handyman project examples across Springfield MO services including estate maintenance, pre-sale prep, trim, drywall, decks, and more.", path="/our-work/", h1="Project Examples Across Our Services", hero_image_key="craftsmanship", body=f"""
+    write("/our-work/", layout(title=f"Projects | {BUSINESS_NAME}", description="Handyman project examples across Springfield MO services including estate maintenance, pre-sale prep, trim, drywall, decks, and more.", path="/our-work/", h1="Project Examples Across Our Services", hero_image_key="deck_outdoor", body=f"""
     <section class="section"><div class="container section-heading"><p class="eyebrow">Projects</p><h2>{len(PROJECTS)} representative projects across our service lines.</h2><p>Real project documentation should replace or expand these examples over time.</p></div><div class="container card-grid">{project_cards}</div></section>
     <section class="section media-section"><div class="container">{img_block("deck_outdoor", "Outdoor living is central to Ozarks home life.")}</div></section>
     """, schema=[local_business_schema(), breadcrumb_schema([("Home", "/"), ("Projects", "/our-work/")])]))
 
     write("/faq/", layout(title=f"Handyman FAQ Springfield MO | {BUSINESS_NAME}", description="Comprehensive handyman FAQ for Springfield Missouri and the Ozarks.", path="/faq/", h1="Handyman FAQ", hero_image_key="ozarks_hills", body=f'<section class="section"><div class="container section-heading"><p class="eyebrow">FAQ</p><h2>{len(all_faqs)}+ questions</h2></div><div class="container faq-grid">{faq_html(all_faqs)}</div></section>', schema=[local_business_schema(), breadcrumb_schema([("Home", "/"), ("FAQ", "/faq/")]), faq_schema(all_faqs)]))
 
-    write("/contact/", layout(title=f"Contact {BUSINESS_NAME}", description="Contact Ozarks Handyman for premium handyman estimates in Springfield MO. Email contact@ozarkshandyman.com with photos and your repair list.", path="/contact/", h1="Request a Handyman Estimate", hero_image_key="estate_exterior", body=f"""
+    write("/contact/", layout(title=f"Contact {BUSINESS_NAME}", description="Contact Ozarks Handyman for premium handyman estimates in Springfield MO. Email contact@ozarkshandyman.com with photos and your repair list.", path="/contact/", h1="Request a Handyman Estimate", hero_image_key="suburban_home", body=f"""
     <section class="section"><div class="container two-col"><div><p class="eyebrow">Start Here</p><h2>Tell us about your home and repair list.</h2><p>Email <a href="mailto:{EMAIL}">{EMAIL}</a> with your neighborhood, photos, and timeline.</p><ul class="check-list"><li>City or Springfield neighborhood</li><li>Photos of each repair area</li><li>Whether this is pre-sale, move-in, rental or routine maintenance</li><li>Your preferred timing</li></ul></div><form class="contact-form panel" action="mailto:{EMAIL}" method="post" enctype="text/plain"><label>Name <input name="name" required></label><label>Email <input type="email" name="email" required></label><label>City / Neighborhood <input name="city"></label><label>Repair List <textarea name="message" rows="7" required></textarea></label><button class="button primary" type="submit">Send Request</button></form></div></section>
     """, schema=[local_business_schema(), breadcrumb_schema([("Home", "/"), ("Contact", "/contact/")])]))
 

@@ -34,7 +34,7 @@ SERVICES: tuple[Service, ...] = (
         ("Doorknob impact holes and anchor damage", "Ceiling stains after resolved leaks", "Cracks at corners and seams", "Nail pops and loose tape", "Texture blending and skim touch-ups", "Rental turnover wall repairs", "Garage and mudroom drywall", "Stairwell and tall-wall patches", "Pre-listing cosmetic wall repairs", "Water-damage cosmetic prep after remediation", "Outlet and switch surround repairs", "Closet and pantry wall damage"),
         ("Invisible patch standards for refined interiors", "Floor and furniture protection as a default", "Honest guidance on texture match limits", "Ideal for estates, rentals and pre-sale prep"),
         ("Whole-wall patch blend in a Fremont Hills living room", "Ceiling stain repair before interior repainting", "Rental turnover hole repair package in south Springfield"),
-        "luxury_interior",
+        "drywall_repair",
     ),
     Service(
         "door-repair", "Door Repair",
@@ -45,7 +45,7 @@ SERVICES: tuple[Service, ...] = (
         ("Sticking interior and exterior doors", "Loose hinges and stripped screws", "Latch and strike plate alignment", "Knob, lever and deadbolt replacement", "Weatherstripping and draft sealing", "Closet, pantry and bi-fold doors", "Door casing and trim touch-ups", "Patio door operation improvements", "Whole-house door tune-ups", "Pre-sale door adjustment lists", "Rental turnover hardware refreshes", "Seasonal humidity-related adjustments"),
         ("Repair-first recommendations", "Hardware expertise for common residential sets", "Quiet, precise operation as the goal", "Bundle multiple doors in one visit"),
         ("Whole-house hinge tune-up before listing in Southern Hills", "Front door weatherseal improvement in Ozark", "Interior latch alignment package in Rountree"),
-        "springfield_home",
+        "door_repair",
     ),
     Service(
         "fence-repair", "Fence Repair",
@@ -56,7 +56,7 @@ SERVICES: tuple[Service, ...] = (
         ("Sagging gate repair and bracing", "Picket and board replacement", "Loose rails and fasteners", "Latch and hinge replacement", "Storm-damage section repairs", "Leaning post stabilization", "Side-yard privacy fence touch-ups", "Pet-related fence damage", "Pre-sale fence presentation repairs", "Rental property fence resets", "Cap and trim board replacement", "Small-section rebuilds when practical"),
         ("Repair before replace whenever sensible", "Gate function restored for daily use", "Material matching when possible", "Clear advice when replacement is smarter"),
         ("Gate realignment on a Republic estate driveway", "Storm-damaged picket replacement in Nixa", "Privacy fence refresh before listing in Battlefield"),
-        "estate_home",
+        "fence_repair",
     ),
     Service(
         "deck-repair", "Deck Repair",
@@ -78,7 +78,7 @@ SERVICES: tuple[Service, ...] = (
         ("Pre-listing cosmetic repairs", "Move-in hardware and door adjustments", "Inspection response items", "Drywall and caulk touch-ups", "Fixture and accessory installs", "Fence and gate adjustments", "Deck and exterior safety items", "Closet and pantry adjustments", "Garage and utility room fixes", "Rental turnover punch lists", "Estate maintenance visits", "Photo-ready repairs before marketing"),
         ("One visit for multiple small items", "Priority guidance when the list is long", "Ideal for Realtors and remote owners", "Clear scope before work begins"),
         ("Pre-photo punch list in Phelps Grove", "Buyer move-in list in Republic", "Inspection response bundle in Springfield"),
-        "craftsmanship",
+        "handyman_detail",
     ),
     Service(
         "rental-property-repairs", "Rental Property Repairs",
@@ -89,7 +89,7 @@ SERVICES: tuple[Service, ...] = (
         ("Move-out drywall and hole repair", "Door, hinge and lockset fixes", "Cabinet hardware and hinge adjustments", "Caulk and bath refresh items", "Fence and gate repairs", "Deck and stair safety fixes", "Shelving and accessory resets", "Light fixture and hardware swaps", "Paint-prep repairs", "Maintenance punch lists", "Duplex turnover bundles", "Remote-owner photo estimates"),
         ("Rent-ready prioritization", "Photo-friendly estimating", "Good for small portfolios", "Clear communication for managers"),
         ("Duplex turnover package in north Springfield", "Kitchen hardware refresh between tenants in Nixa", "Move-out repair sprint in Ozark"),
-        "springfield_home",
+        "rental_interior",
     ),
     Service(
         "small-home-repairs", "Small Home Repairs",
@@ -100,7 +100,7 @@ SERVICES: tuple[Service, ...] = (
         ("Loose handles and hinges", "Drywall dents and patches", "Door and cabinet adjustments", "Caulk and grout touch-ups", "Shelving and mirror installs", "Fence gate fixes", "Deck board repairs", "Trim and baseboard touch-ups", "Fixture and hardware swaps", "Pet and family wear-and-tear fixes", "Senior safety hardware checks", "Seasonal maintenance items"),
         ("Small jobs taken seriously", "Bundle for better value", "Respectful in-home standards", "Straightforward estimates"),
         ("Whole-home detail visit in Brentwood", "Seasonal maintenance bundle in Willard", "Family home tune-up in Strafford"),
-        "luxury_interior",
+        "handyman_detail",
     ),
     Service(
         "trim-molding", "Trim and Molding Repair",
@@ -111,7 +111,7 @@ SERVICES: tuple[Service, ...] = (
         ("Baseboard repair and replacement sections", "Door and window casing fixes", "Crown molding touch-ups", "Shoe molding and sill trim", "Loose trim re-nailing", "Gap caulking before paint", "Corner joint repairs", "Stair skirt board fixes", "Built-in trim accents", "Scuff and impact damage repair", "Paint-prep trim smoothing", "Small custom trim patches"),
         ("Crisp finish lines matter", "Paint-prep friendly repairs", "Careful matching to existing profiles", "Pairs well with drywall and caulk work"),
         ("Baseboard replacement before interior repaint", "Casing repair around upgraded doors", "Stair trim touch-up in an older Springfield home"),
-        "craftsmanship",
+        "trim_carpentry",
     ),
     Service(
         "cabinet-repair", "Cabinet Repair and Hardware",
@@ -122,7 +122,7 @@ SERVICES: tuple[Service, ...] = (
         ("Hinge adjustment and replacement", "Cabinet door alignment", "Drawer front tightening", "Knob and pull upgrades", "Soft-close hinge installs", "Vanity door and hinge repair", "Pantry cabinet adjustments", "Bath hardware coordination", "Loose box tightening access repairs", "Rental kitchen refreshes", "Pre-sale cabinet tune-ups", "Laundry and mudroom cabinet fixes"),
         ("High visual impact for modest cost", "Rental-ready kitchen and bath refreshes", "Precise alignment and quiet close", "Coordinates with punch-list work"),
         ("Kitchen hardware refresh before listing", "Vanity hinge repair in a master bath", "Rental kitchen tune-up in Republic"),
-        "luxury_interior",
+        "kitchen_cabinets",
     ),
     Service(
         "tile-backsplash", "Tile and Backsplash Repair",
@@ -133,7 +133,7 @@ SERVICES: tuple[Service, ...] = (
         ("Cracked backsplash tile replacement", "Grout repair and refresh", "Loose tile stabilization", "Shower surround touch-ups", "Floor transition repairs", "Caulk and tile joint improvements", "Accent tile repairs", "Rental bath refresh items", "Pre-sale kitchen touch-ups", "Laundry room tile fixes", "Small backsplash installs", "Tile edge chip repairs"),
         ("Localized repair before full retile", "Pairs with caulk and hardware work", "Realistic finish expectations", "Great for rentals and refreshes"),
         ("Backsplash tile swap in a kitchen refresh", "Grout refresh before listing photos", "Bath surround touch-up in Ozark"),
-        "luxury_interior",
+        "tile_backsplash",
     ),
     Service(
         "caulking-weather-sealing", "Caulking and Weather Sealing",
@@ -144,7 +144,7 @@ SERVICES: tuple[Service, ...] = (
         ("Tub, shower and sink recaulking", "Kitchen backsplash and counter joints", "Window and door seal improvements", "Exterior trim caulking", "Siding penetration sealing", "Paint-prep caulk lines", "Seasonal maintenance refresh", "Rental bath resealing", "Pre-sale cosmetic sealing", "Garage and utility area caulking", "Interior trim gap sealing", "Draft-reduction touch-ups"),
         ("Fast visual upgrade", "Right product for wet vs dry areas", "Pairs with paint and trim prep", "Seasonal maintenance friendly"),
         ("Master bath recaulk before guest season", "Exterior trim seal refresh in Willard", "Kitchen and bath rental turnover reseal"),
-        "springfield_home",
+        "bath_caulk",
     ),
     Service(
         "tv-mounting-fixtures", "TV Mounting and Fixture Installation",
@@ -155,7 +155,7 @@ SERVICES: tuple[Service, ...] = (
         ("TV wall mounting", "Cable tidying where practical", "Mirror and art hanging", "Towel bars and bath accessories", "Light fixture change-outs within scope", "Floating shelf installs", "Closet rod and bracket installs", "Garage organizer mounting", "Entryway hook systems", "Kitchen accessory installs", "Patching old mount holes", "Bundled multi-room installs"),
         ("Proper anchoring for safety", "Clean alignment and spacing", "Patch old holes when needed", "Bundle multiple installs efficiently"),
         ("Media room TV mount and shelf install", "Master bath accessory package in Nixa", "Move-in mounting list in Springfield"),
-        "luxury_interior",
+        "tv_mounting",
     ),
     Service(
         "custom-shelving-carpentry", "Custom Shelving and Carpentry Accents",
@@ -166,7 +166,7 @@ SERVICES: tuple[Service, ...] = (
         ("Closet shelving systems", "Pantry shelving upgrades", "Laundry room storage", "Mudroom bench and hook details", "Garage storage shelves", "Built-in repair and reinforcement", "Decorative accent carpentry", "Bookcase and niche shelving", "Entryway storage improvements", "Utility room organization", "Paint-prep carpentry", "Rental storage upgrades"),
         ("Custom fit without full remodel pricing", "Practical storage for daily use", "Pairs with trim and paint prep", "Strong move-in upgrade category"),
         ("Pantry shelving upgrade in Republic", "Mudroom detail package in Battlefield", "Closet system refresh in Fremont Hills"),
-        "craftsmanship",
+        "closet_shelving",
     ),
     Service(
         "pre-sale-home-prep", "Pre-Sale Home Prep",
@@ -177,7 +177,7 @@ SERVICES: tuple[Service, ...] = (
         ("Pre-photo cosmetic repairs", "Inspection response items within scope", "Drywall, caulk and hardware fixes", "Door and trim adjustments", "Deck and fence presentation repairs", "Bath and kitchen touch-ups", "Fixture and accessory refreshes", "Curb-appeal exterior items", "Investor sale-ready bundles", "Agent-coordinated punch lists", "Priority sequencing by deadline", "Move-out sale prep for owners"),
         ("High-impact repair prioritization", "Agent-friendly coordination", "Photo and showing deadline awareness", "Pairs with all other service categories"),
         ("Listing prep in Southern Hills before photos", "Inspection response bundle in Rountree", "Investor sale-ready package in Ozark"),
-        "estate_home",
+        "pre_sale_staging",
     ),
     Service(
         "estate-maintenance", "Estate Maintenance",
@@ -188,7 +188,7 @@ SERVICES: tuple[Service, ...] = (
         ("Seasonal maintenance walkthroughs", "Recurring repair lists", "Hardware and trim tune-ups", "Drywall and caulk refresh", "Door and screen programs", "Deck and fence monitoring", "Fixture and accessory installs", "Guest house punch lists", "Second-home opening checklists", "Pre-entertaining repair visits", "Estate exterior presentation", "Whole-home detail tune-ups"),
         ("Discreet, respectful in-home standards", "Multi-item visit efficiency", "Clear written scope", "Ideal for executive and second homes"),
         ("Quarterly estate tune-up in Fremont Hills", "Seasonal exterior detail visit in Del Lago", "Guest house refresh before family arrival"),
-        "estate_exterior",
+        "traditional_estate",
     ),
     Service(
         "gutter-repair", "Gutter and Downspout Repair",
@@ -199,7 +199,7 @@ SERVICES: tuple[Service, ...] = (
         ("Leak sealing at joints and seams", "Sagging gutter correction", "Bracket and hanger replacement", "Downspout reattachment", "Splash block alignment", "Corner and end cap repair", "Drainage path correction", "Fascia attachment review", "Pre-storm gutter tune-ups", "Pre-sale gutter polish", "Leaf-guard adjustment where present", "Whole-house gutter inspection visits"),
         ("Water-path focus", "Repair before full replacement", "Practical safety access", "Protects siding and foundation edges"),
         ("Gutter leak elimination on a Southern Hills home", "Downspout reroute in Republic", "Pre-storm gutter tune-up in Nixa"),
-        "springfield_home",
+        "gutter_exterior",
     ),
     Service(
         "screen-repair", "Screen Repair",
@@ -210,7 +210,7 @@ SERVICES: tuple[Service, ...] = (
         ("Window screen rescreening", "Sliding door screen replacement", "Porch screen panel repair", "Spline and frame tune-ups", "Screen door alignment", "Storm door screen inserts", "Pet-resistant screen upgrades", "Second-story screen access repairs", "Rental turnover screen resets", "Whole-home screen refresh visits", "Garage passage screens", "Seasonal screen storage prep"),
         ("Clean frame alignment", "Tight mesh finish", "Seasonal readiness", "Multi-opening bundles"),
         ("Porch screen restoration in Ozark", "Whole-home screen refresh in Springfield", "Rental turnover screen repair in Phelps Grove"),
-        "estate_home",
+        "screen_porch",
     ),
     Service(
         "interior-paint-touchups", "Interior Paint Touch-Ups",
@@ -221,7 +221,7 @@ SERVICES: tuple[Service, ...] = (
         ("Wall spot touch-ups after repairs", "Trim and casing refresh", "Ceiling stain blocking prep", "Door paint chip correction", "Closet and pantry spot painting", "Stair and hall scuff touch-ups", "Accent wall corrections", "Nail hole and patch paint blend", "Cabinet paint chip touch-ups", "Pre-sale paint polish", "Rental turnover spot painting", "Paint-prep after drywall repair"),
         ("Careful masking in lived-in spaces", "Sheen and blend realism", "Pairs with drywall and trim work", "Listing-ready finish focus"),
         ("Post-repair paint blend in Rountree living room", "Trim and wall refresh before listing photos", "Rental turnover paint spots in north Springfield"),
-        "luxury_interior",
+        "interior_paint",
     ),
 )
 
